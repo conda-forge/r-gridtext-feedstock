@@ -39,7 +39,7 @@ requirements:
     - r-png
     - r-rlang
     - r-stringr
-    - r-testthat
+    - r-systemfonts
     - r-xml2
   run:
     - r-base
@@ -51,7 +51,7 @@ requirements:
     - r-png
     - r-rlang
     - r-stringr
-    - r-testthat
+    - r-systemfonts
     - r-xml2
 
 test:
