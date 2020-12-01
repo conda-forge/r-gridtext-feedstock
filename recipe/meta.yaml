@@ -1,4 +1,4 @@
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gridtext_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gridtext/gridtext_{{ version }}.tar.gz
-  sha256: a7152763c1a3bf943cb85bf21c6f275c4573d951695435d10e35b98f6c1f2b1b
+  sha256: cbc4d1de0cc1ff5a02800baefeaaa92b7f3f3a9612d79a5552a8dc35adfee670
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -39,7 +39,7 @@ requirements:
     - r-png
     - r-rlang
     - r-stringr
-    - r-testthat
+    - r-systemfonts
     - r-xml2
   run:
     - r-base
@@ -51,7 +51,7 @@ requirements:
     - r-png
     - r-rlang
     - r-stringr
-    - r-testthat
+    - r-systemfonts
     - r-xml2
 
 test:
@@ -62,8 +62,7 @@ test:
 about:
   home: https://wilkelab.org/gridtext
   license: MIT
-  summary: Provides support for rendering of formatted text using 'grid' graphics. Text can be formatted via a minimal subset of 'Markdown', 'HTML', and inline 'CSS'
-    directives, and it can be rendered both with and without word wrap.
+  summary: Provides support for rendering of formatted text using 'grid' graphics. Text can be formatted via a minimal subset of 'Markdown', 'HTML', and inline 'CSS' directives, and it can be rendered both with and without word wrap.
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
