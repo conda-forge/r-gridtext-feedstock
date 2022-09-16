@@ -1,4 +1,4 @@
-{% set version = "0.1.4" %}
+{% set version = "0.1.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gridtext_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gridtext/gridtext_{{ version }}.tar.gz
-  sha256: c1cca9c68c6de4095546d2dab0ffff1d6e4fcf9ca2b9e878dc7a7237ede1338c
+  sha256: 6d98716461f8574b4c8f72c6b2163b92bb394e60e247e19f42912b871616f138
 
 build:
   merge_build_host: true  # [win]
