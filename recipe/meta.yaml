@@ -30,28 +30,27 @@ requirements:
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-rcurl
     - r-rcpp
+    - r-curl
     - r-jpeg
     - r-markdown
     - r-png
     - r-rlang
     - r-stringr
-    - r-systemfonts
     - r-xml2
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
-    - r-rcurl
     - r-rcpp
+    - r-curl
     - r-jpeg
     - r-markdown
     - r-png
     - r-rlang
     - r-stringr
-    - r-systemfonts
     - r-xml2
 
 test:
