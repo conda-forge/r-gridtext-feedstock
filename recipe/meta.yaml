@@ -1,4 +1,4 @@
-{% set version = "0.1.5" %}
+{% set version = "0.1.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gridtext_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gridtext/gridtext_{{ version }}.tar.gz
-  sha256: 6d98716461f8574b4c8f72c6b2163b92bb394e60e247e19f42912b871616f138
+  sha256: 2b380e133719582e37cbb68754b0e0b009d95c7ad7e9d3da40d38dd858ee81de
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
